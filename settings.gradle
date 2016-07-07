@@ -1,1 +1,1 @@
-include ':app', ':textview'
+include ':app', ':textview', ':coki'
