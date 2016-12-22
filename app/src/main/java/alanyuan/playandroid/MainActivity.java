@@ -1,18 +1,24 @@
 package alanyuan.playandroid;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.tencent.tinker.app.TinkerServerManager;
+import com.tencent.tinker.lib.tinker.TinkerInstaller;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+    private final String TAG = MainActivity.class.getName();
     private ImageButton mBtnLike;
     private TextView mTvMain;
     private Animation mBtnLikeAnim, mBtnLikeAnim2;
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mTvMain = (TextView) findViewById(R.id.tv_main);
         SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM-dd", Locale.PRC);
         mTvMain.setText(dateFormat.format(new Date()));
+//        mTvMain.setText("XXXXXXX");
     }
 
     private void setListener() {
@@ -39,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 loadAnimation();
                 mBtnLike.setImageResource(R.mipmap.icon_liked);
                 mBtnLike.startAnimation(mBtnLikeAnim);
+                checkTinkerUpdate();
             }
         });
     }
@@ -61,5 +69,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    /**
+     * 检查Tinker有没有补丁更新
+     */
+    private void checkTinkerUpdate(){
+        Log.d(TAG,"checkTinkerUpdate");
+        TinkerServerManager.checkTinkerUpdate(true);
+    }
+
+    /**
+     * 加载补丁
+     */
+    private void loadPatch() {
+        TinkerInstaller.onReceiveUpgradePatch(getApplicationContext(),
+                Environment.getExternalStorageDirectory().getAbsolutePath() + "/patch_signed_7zip.apk");
     }
 }
