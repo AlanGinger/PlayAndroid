@@ -17,7 +17,7 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".AnimationActivity" >
+        <activity android:name=".TabLayoutActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
