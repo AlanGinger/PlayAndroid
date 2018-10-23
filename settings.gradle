@@ -1,1 +1,1 @@
-include ':app', ':textview', ':azeroth', ':jpush'
+include ':app', ':textview', ':azeroth'

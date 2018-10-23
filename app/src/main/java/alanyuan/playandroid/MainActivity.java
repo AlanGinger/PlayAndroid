@@ -1,7 +1,6 @@
 package alanyuan.playandroid;
 
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -9,9 +8,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
-import com.tencent.tinker.app.TinkerServerManager;
-import com.tencent.tinker.lib.tinker.TinkerInstaller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -76,14 +72,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private void checkTinkerUpdate(){
         Log.d(TAG,"checkTinkerUpdate");
-        TinkerServerManager.checkTinkerUpdate(true);
     }
 
     /**
      * 加载补丁
      */
     private void loadPatch() {
-        TinkerInstaller.onReceiveUpgradePatch(getApplicationContext(),
-                Environment.getExternalStorageDirectory().getAbsolutePath() + "/patch_signed_7zip.apk");
     }
 }

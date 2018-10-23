@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/PlayAndroid.iml" filepath="$PROJECT_DIR$/PlayAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/azeroth/azeroth.iml" filepath="$PROJECT_DIR$/azeroth/azeroth.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jpush/jpush.iml" filepath="$PROJECT_DIR$/jpush/jpush.iml" />
       <module fileurl="file://$PROJECT_DIR$/textview/textview.iml" filepath="$PROJECT_DIR$/textview/textview.iml" />
     </modules>
   </component>
