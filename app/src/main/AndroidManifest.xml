@@ -22,13 +22,14 @@
         <activity android:name=".TabLayoutActivity" >
 
         </activity>
-        <activity android:name=".KotlinActivity" >
+        <activity android:name=".RandomBallActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".KotlinActivity" />
 
     </application>
 
