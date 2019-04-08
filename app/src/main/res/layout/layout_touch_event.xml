@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alanyuan.playandroid.TouchEventViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:tag="A"
+    android:layout_height="match_parent"
+    android:background="#75d6ff">
+
+    <alanyuan.playandroid.TouchEventViewGroup
+        android:layout_width="300dp"
+        android:tag="B"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:background="#b0f566">
+
+        <alanyuan.playandroid.TouchEventViewGroup
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:tag="C"
+            android:layout_gravity="center"
+            android:background="#fffb00"/>
+
+    </alanyuan.playandroid.TouchEventViewGroup>
+
+</alanyuan.playandroid.TouchEventViewGroup>

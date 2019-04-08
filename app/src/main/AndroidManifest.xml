@@ -22,7 +22,7 @@
         <activity android:name=".TabLayoutActivity" >
 
         </activity>
-        <activity android:name=".RandomBallActivity" >
+        <activity android:name=".TouchEventActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".KotlinActivity" />
+        <activity android:name=".RandomBallActivity" />
 
     </application>
 
